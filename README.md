@@ -37,10 +37,9 @@ Follow [these instructions](http://dreamhouse-site.herokuapp.com/installation/) 
 ## Build and Run in your Browser
 
 Type the following command to run the app in your browser:    
-
-    ```
-    ionic serve
-    ```
+```
+ionic serve
+```
 
 ## Build and Run on Device
 
@@ -57,7 +56,7 @@ Type the following command to run the app in your browser:
 
 1. Open ```DreamHouse.xcodeproj``` in the ```dreamhouse-mobile-app/platforms/ios``` directory  
 
-1. In Xcode, click DreamHouse in the left sidebar. In the Signing section, select a team corresponding to a valid certificate
+1. In Xcode, click **DreamHouse** in the left sidebar. In the **Signing** section, select a team corresponding to a valid certificate
 
-1. Click the Run button in the toolbar to run the application on your device.
+1. Click the **Run** button in the toolbar to run the application on your device
 
