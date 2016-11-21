@@ -9,14 +9,14 @@ Follow [these instructions](http://dreamhouse-site.herokuapp.com/installation/) 
 
 ## Install the Application
 
-1. Install the latest version of Cordova and Ionic 2 beta:
+1. Install the latest version of Cordova and Ionic 2:
     ```
-    npm install -g cordova ionic@beta
+    npm install -g cordova ionic
     ```
 
     or (Mac):
     ```
-    sudo npm install -g cordova ionic@beta
+    sudo npm install -g cordova ionic
     ```
 
 1. Clone this repository:
