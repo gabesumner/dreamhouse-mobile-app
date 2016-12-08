@@ -36,7 +36,9 @@ Follow [these instructions](http://dreamhouse-site.herokuapp.com/installation/) 
 
 ## Run in your Browser    
 
-1. To run the app in the browser:
+1. On the command line, make sure you are in the `dreamhouse-mobile-app` directory:
+
+1. Type the following command to run the app in the browser:
     ```
     ionic serve
     ```
@@ -45,11 +47,11 @@ Follow [these instructions](http://dreamhouse-site.herokuapp.com/installation/) 
     - Make sure you log in the org you installed the DreamHouse package in.
 
 
-## Build and Run on Device
+## Build and Run on an iOS Device
 
-1. Restore the state of the application using the `cordovaPlugins` and `cordovaPlatforms` entries in package.json:
+1. Restore the required platform and plugins from config.xml:
     ```
-    ionic state restore
+    cordova prepare
     ```
 
 1. Build the app for iOS:
