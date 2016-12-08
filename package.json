@@ -37,7 +37,8 @@
     "cordova-plugin-console",
     "cordova-plugin-device",
     "cordova-plugin-splashscreen",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "https://github.com/forcedotcom/SalesforceMobileSDK-CordovaPlugin"
   ],
   "cordovaPlatforms": [
     "ios",
