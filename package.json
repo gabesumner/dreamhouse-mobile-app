@@ -48,7 +48,7 @@
     {
       "platform": "ios",
       "version": "4.2.0",
-      "locator": "ios"
+      "locator": "ios@4.2.0"
     }
   ],
   "description": "dreamhouse-rc3: An Ionic project"
