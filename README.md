@@ -49,10 +49,12 @@ Follow [these instructions](http://dreamhouse-site.herokuapp.com/installation/) 
 
 ## Build and Run on an iOS Device
 
-1. Restore the required platform and plugins from config.xml:
+1. Install the required plugins (including the Salesforce Mobile SDK plugin) and platform from config.xml:
     ```
     cordova prepare
     ```
+
+    > The Salesforce Mobile SDK plugin currently requires cordova-ios version 4.2.0 which is automatically installed by `cordova prepare` (see `engine` entry in config.xml).
 
 1. Build the app for iOS:
     ```
