@@ -31,25 +31,5 @@
     "leaflet": "^1.0.2",
     "typescript": "2.0.6"
   },
-  "cordovaPlugins": [
-    "cordova-plugin-whitelist",
-    "cordova-plugin-statusbar",
-    "cordova-plugin-console",
-    "cordova-plugin-device",
-    "cordova-plugin-splashscreen",
-    "ionic-plugin-keyboard",
-    {
-      "locator": "https://github.com/forcedotcom/SalesforceMobileSDK-CordovaPlugin",
-      "id": "com.salesforce.mobilesdk"
-    }
-  ],
-  "cordovaPlatforms": [
-    "ios",
-    {
-      "platform": "ios",
-      "version": "4.2.0",
-      "locator": "ios@4.2.0"
-    }
-  ],
   "description": "dreamhouse-rc3: An Ionic project"
 }
