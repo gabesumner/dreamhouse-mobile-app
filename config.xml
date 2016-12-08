@@ -28,12 +28,12 @@
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
-    <engine name="ios" spec="4.2.0" />
-    <plugin name="cordova-plugin-whitelist"/>
-    <plugin name="cordova-plugin-statusbar"/>
-    <plugin name="cordova-plugin-console"/>
-    <plugin name="cordova-plugin-device"/>
-    <plugin name="cordova-plugin-splashscreen"/>
-    <plugin name="ionic-plugin-keyboard"/>
+    <plugin name="cordova-plugin-whitelist" />
+    <plugin name="cordova-plugin-statusbar" />
+    <plugin name="cordova-plugin-console" />
+    <plugin name="cordova-plugin-device" />
+    <plugin name="cordova-plugin-splashscreen" />
+    <plugin name="ionic-plugin-keyboard" />
     <plugin name="com.salesforce.mobilesdk" spec="https://github.com/forcedotcom/SalesforceMobileSDK-CordovaPlugin" />
+    <engine name="ios" spec="~4.2.0" />
 </widget>
