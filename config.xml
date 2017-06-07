@@ -35,5 +35,5 @@
     <plugin name="cordova-plugin-splashscreen" />
     <plugin name="ionic-plugin-keyboard" />
     <plugin name="com.salesforce.mobilesdk" spec="https://github.com/forcedotcom/SalesforceMobileSDK-CordovaPlugin" />
-    <engine name="ios" spec="4.2.0" />
+    <engine name="ios" spec="4.3.0" />
 </widget>
