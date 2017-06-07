@@ -11,13 +11,15 @@ Follow [these instructions](http://dreamhouse-site.herokuapp.com/installation/) 
 
 1. Install the latest version of Cordova and Ionic 2 beta:
     ```
-    npm install -g cordova ionic
+    npm install -g cordova6.4.0 ionic
     ```
 
     or (Mac):
     ```
-    sudo npm install -g cordova ionic
+    sudo npm install -g cordova6.4.0 ionic
     ```
+
+     > The Salesforce Mobile SDK plugin currently requires Cordova version 6.4.0. Newer versions of Cordova are not yet supported.
 
 1. Clone this repository:
     ```
@@ -54,11 +56,11 @@ Follow [these instructions](http://dreamhouse-site.herokuapp.com/installation/) 
     cordova prepare
     ```
 
-    > The Salesforce Mobile SDK plugin currently requires cordova-ios version 4.2.0 which is automatically installed by `cordova prepare` (see `engine` entry in config.xml).
+    > The Salesforce Mobile SDK plugin currently requires cordova-ios version 4.3.0 which is automatically installed by `cordova prepare` (see `engine` entry in config.xml).
 
 1. Build the app for iOS:
     ```
-    ionic build ios
+    ionic cordova build ios
     ```
 
 1. Open ```DreamHouse.xcodeproj``` in the ```dreamhouse-mobile-app/platforms/ios``` directory  
