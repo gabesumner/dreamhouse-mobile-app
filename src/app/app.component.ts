@@ -12,6 +12,7 @@ import {OAuth, DataService} from 'forcejs';
 // import OAuth from 'forcejs/oauth';
 // import Service from 'forcejs/service';
 
+declare var cordova;
 
 export interface MenuItem {
     title: string;
@@ -51,16 +52,29 @@ export class MyApp {
     initializeApp() {
 
         // Uncomment when using the *-service-salesforce services
-        let oauth = OAuth.createInstance();
-        oauth.login("3MVG9sG9Z3Q1Rlbc4tkIx2fI3ZYblYiG9oMxlbHO3gixLK8CcH.342BxX6L7NT8W4iND3lT9h52sAq1KtTIiz").then((oauthData) => {
+        let oauth = OAuth.createInstance("3MVG9CEn_O3jvv0zqR7Uf3IK277qNbYhPL3A3ONuZmxQsUpRaftZz6o9hhcpD4_yRzjnbBydFCa_RyRGNgyKG", "https://dreamhouse-demo-org-dev-ed.my.salesforce.com");
+        oauth.login().then((oauthData) => {
             DataService.createInstance(oauthData, {proxyURL: "https://dev-cors-proxy.herokuapp.com/"});
         });
 
         this.platform.ready().then(() => {
+                if (this.platform.is('cordova')) {
+                cordova.require("com.salesforce.util.push").registerPushNotificationHandler(
+                    function(message) {
+                        // add code to handle notifications
+                        alert(message);
+                    },
+                    function(error) {
+                        // add code to handle errors
+                    }
+                );
+            };
+
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             StatusBar.styleLightContent();
             Splashscreen.hide();
+                     
         });
     }
 
