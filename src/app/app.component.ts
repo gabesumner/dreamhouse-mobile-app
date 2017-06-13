@@ -62,10 +62,11 @@ export class MyApp {
                 cordova.require("com.salesforce.util.push").registerPushNotificationHandler(
                     function(message) {
                         // add code to handle notifications
-                        alert(message);
+                        alert(JSON.stringify(message));
                     },
                     function(error) {
                         // add code to handle errors
+                        alert(error);
                     }
                 );
             };
