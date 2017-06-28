@@ -39,6 +39,12 @@ export class BrokerService {
     }
 
     findById(id) {
+        this.service.create('AppActivity__c', {
+            Name: "Viewed a broker",
+            Broker__c: id,
+            User__c: this.service.getUserId()
+        });
+
         return this.service.retrieve('Broker__c', id,
                   `Id,
                   Name,

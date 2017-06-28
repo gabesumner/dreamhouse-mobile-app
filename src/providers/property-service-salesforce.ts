@@ -65,6 +65,13 @@ export class PropertyService {
 
 
     findById(id) {
+
+        this.service.create('AppActivity__c', {
+            Name: "Viewed a property",
+            Property__c: id,
+            User__c: this.service.getUserId()
+        });
+
         return this.service.retrieve('Property__c', id,
             `id,
                                 title__c,
@@ -79,7 +86,7 @@ export class PropertyService {
                                 broker__r.Name,
                                 broker__r.Title__c,
                                 broker__r.Picture__c`)
-            .then(this.prettifyProperty);
+            .then(this.prettifyProperty)
     }
 
     findByName(key) {
@@ -112,10 +119,22 @@ export class PropertyService {
     }
 
     favorite(property) {
+        this.service.create('AppActivity__c', {
+            Name: "Favorited a property",
+            Property__c: property.id,
+            User__c: this.service.getUserId()
+        });
+
         return this.service.create('Favorite__c', {User__c: this.service.getUserId(), Property__c: property.id});
     }
 
     unfavorite(favorite) {
+        this.service.create('AppActivity__c', {
+            Name: "Unfavorited a property",
+            Property__c: favorite.id,
+            User__c: this.service.getUserId()
+        });
+
         return this.service.del('Favorite__c', favorite.id);
     }
 
