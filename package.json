@@ -33,7 +33,7 @@
     "@ionic/cli-plugin-ionic-angular": "1.3.1",
     "forcejs": "^2.0.1",
     "leaflet": "^1.0.2",
-    "typescript": "2.0.6"
+    "typescript": "2.3.4"
   },
   "description": "dreamhouse-rc3: An Ionic project"
 }

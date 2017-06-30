@@ -58,7 +58,7 @@ export class MyApp {
         });
 
         this.platform.ready().then(() => {
-                if (this.platform.is('cordova')) {
+            if (this.platform.is('cordova')) {
                 cordova.require("com.salesforce.util.push").registerPushNotificationHandler(
                     function(message) {
                         // add code to handle notifications
