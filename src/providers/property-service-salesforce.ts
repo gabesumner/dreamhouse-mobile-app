@@ -66,11 +66,23 @@ export class PropertyService {
 
     findById(id) {
 
+        /*
         this.service.create('AppActivity__c', {
             Name: "Viewed a property",
             Property__c: id,
             User__c: this.service.getUserId()
         });
+        */
+
+        this.service.request(
+            {
+                path: "/services/apexrest/CreateAppActivity",
+                params: {
+                    property: id,
+                    message: "Viewed a property"
+                }
+            }
+        );
 
         return this.service.retrieve('Property__c', id,
             `id,
@@ -119,13 +131,36 @@ export class PropertyService {
     }
 
     favorite(property) {
+        console.log('Favorite Property:' + property.id);
+
+        /*
         this.service.create('AppActivity__c', {
             Name: "Favorited a property",
             Property__c: property.id,
             User__c: this.service.getUserId()
         });
+        */
 
-        return this.service.create('Favorite__c', {User__c: this.service.getUserId(), Property__c: property.id});
+        this.service.request(
+            {
+                path: "/services/apexrest/CreateAppActivity",
+                params: {
+                    property: property.id,
+                    message: "Favorited a property"
+                }
+            }
+        );
+
+        return this.service.request(
+            {
+                path: "/services/apexrest/CreateFavorite",
+                params: {id: property.id}
+            }
+        );
+
+        //return this.service.apexrest('/services/apexrest/CreateFavorite?id=' + property.id); 
+
+        //return this.service.create('Favorite__c', {User__c: this.service.getUserId(), Property__c: property.id});
     }
 
     unfavorite(favorite) {
