@@ -1,5 +1,5 @@
 {
-    "remoteAccessConsumerKey": "3MVG9CEn_O3jvv0zqR7Uf3IK277qNbYhPL3A3ONuZmxQsUpRaftZz6o9hhcpD4_yRzjnbBydFCa_RyRGNgyKG",
+    "remoteAccessConsumerKey": "3MVG9g9rbsTkKnAXt4zE7C_czxUvMm4WN58FnKX7Q.N8VJ4uiHDOVsEOmQL4RIXwDFZHERigiI1mv5NNcd67M",
     "oauthRedirectURI": "testsfdc:///mobilesdk/detect/oauth/done",
     "oauthScopes": [
         "web",

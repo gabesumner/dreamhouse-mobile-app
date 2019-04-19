@@ -52,7 +52,7 @@ export class MyApp {
     initializeApp() {
 
         // Uncomment when using the *-service-salesforce services
-        let oauth = OAuth.createInstance("3MVG9CEn_O3jvv0zqR7Uf3IK277qNbYhPL3A3ONuZmxQsUpRaftZz6o9hhcpD4_yRzjnbBydFCa_RyRGNgyKG", "https://dreamhouse-demo-org-dev-ed.my.salesforce.com");
+        let oauth = OAuth.createInstance("3MVG9g9rbsTkKnAXt4zE7C_czxUvMm4WN58FnKX7Q.N8VJ4uiHDOVsEOmQL4RIXwDFZHERigiI1mv5NNcd67M", "https://login.salesforce.com");
         oauth.login().then((oauthData) => {
             DataService.createInstance(oauthData, {proxyURL: "https://dev-cors-proxy.herokuapp.com/"});
         });
@@ -62,7 +62,7 @@ export class MyApp {
                 cordova.require("com.salesforce.util.push").registerPushNotificationHandler(
                     function(message) {
                         // add code to handle notifications
-                        alert(JSON.stringify(message));
+                        alert(message.message);
                     },
                     function(error) {
                         // add code to handle errors
